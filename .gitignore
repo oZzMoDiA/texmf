@@ -1,0 +1,25 @@
+# ignore all files but allow directories
+*
+!*/
+
+# allow .gitignore file
+!.gitignore
+
+# only allow pdf files in /doc
+!/doc/**/*.pdf
+
+# only allow sty and cls files in /tex/latex
+!/tex/latex/**/*.sty
+!/tex/latex/**/*.cls
+
+# allow all files in /source
+!/source/**/*
+
+# ignore log files
+*.log
+
+# ignore vim files
+*.swp
+
+# ignore git files
+*.orig
