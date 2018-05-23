@@ -1,0 +1,102 @@
+%%
+%% This is file `ozz-theme-gruvbox.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ozz-theme-gruvbox.dtx  (with options: `ozz-theme-gruvbox')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2018 by oZzMoDiA <ozzmodia@outlook.com>
+%% -----------------------------------------------------
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3c of this license
+%% or (at your option) any later version. The latest version of this
+%% license is in:
+%% 
+%%     http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2006/05/20 or later.
+%% 
+\NeedsTeXFormat{LaTeX2e}[2017/04/15]
+\ProvidesPackage{ozz-theme-gruvbox}
+  [2018/05/20 v1.0 oZzMoDiA Theme Gruvbox]
+\newif\ifdisabled
+\disabledfalse
+\DeclareOption{disable}{
+    \disabledtrue
+}
+\ProcessOptions\relax
+
+
+
+
+
+
+
+
+\RequirePackage{xcolor}
+\definecolor{gruvboxbg}{HTML}{282828}
+\definecolor{gruvboxbg0h}{HTML}{1d2021}
+\definecolor{gruvboxbg0}{HTML}{282828}
+\definecolor{gruvboxbg1}{HTML}{3c3836}
+\definecolor{gruvboxbg2}{HTML}{584945}
+\definecolor{gruvboxbg3}{HTML}{665c54}
+\definecolor{gruvboxbg4}{HTML}{7c6f64}
+\definecolor{gruvboxgray}{HTML}{928374}
+\definecolor{gruvboxfg}{HTML}{ebdbb2}
+\definecolor{gruvboxfg0}{HTML}{fbf1c7}
+\definecolor{gruvboxfg1}{HTML}{ebdbb2}
+\definecolor{gruvboxfg2}{HTML}{d5c4a1}
+\definecolor{gruvboxfg3}{HTML}{bdae93}
+\definecolor{gruvboxfg4}{HTML}{a89984}
+\definecolor{gruvboxlightred}{HTML}{fb4934}
+\definecolor{gruvboxred}{HTML}{cc241d}
+\definecolor{gruvboxdarkred}{HTML}{9d0006}
+\definecolor{gruvboxlightgreen}{HTML}{b8bb26}
+\definecolor{gruvboxgreen}{HTML}{98971a}
+\definecolor{gruvboxdarkgreen}{HTML}{79740e}
+\definecolor{gruvboxlightyellow}{HTML}{fabd2f}
+\definecolor{gruvboxyellow}{HTML}{d79921}
+\definecolor{gruvboxdarkyellow}{HTML}{b57614}
+\definecolor{gruvboxlightblue}{HTML}{83a598}
+\definecolor{gruvboxblue}{HTML}{458588}
+\definecolor{gruvboxdarkblue}{HTML}{076678}
+\definecolor{gruvboxlightpurple}{HTML}{d3869b}
+\definecolor{gruvboxpurple}{HTML}{b16286}
+\definecolor{gruvboxdarkpurple}{HTML}{8f3f71}
+\definecolor{gruvboxlightaqua}{HTML}{8ec07c}
+\definecolor{gruvboxaqua}{HTML}{689d6a}
+\definecolor{gruvboxdarkaqua}{HTML}{427b58}
+\definecolor{gruvboxlightorange}{HTML}{fe8019}
+\definecolor{gruvboxorange}{HTML}{d65d0e}
+\definecolor{gruvboxdarkorange}{HTML}{af3a03}
+\ifdisabled
+\else
+\RequirePackage[pagecolor={gruvboxbg},nopagecolor={none}]{pagecolor}
+\color{gruvboxfg}
+\colorlet{black}{gruvboxbg0h}
+\colorlet{blue}{gruvboxblue}
+\colorlet{brown}{gruvboxdarkorange}
+\colorlet{cyan}{gruvboxaqua}
+\colorlet{darkgray}{gruvboxbg1}
+\colorlet{gray}{gruvboxgray}
+\colorlet{lightgray}{gruvboxfg4}
+\colorlet{green}{gruvboxgreen}
+\colorlet{lime}{gruvboxlightgreen}
+\colorlet{magenta}{gruvboxlightpurple}
+\colorlet{olive}{gruvboxdarkgreen}
+\colorlet{orange}{gruvboxorange}
+\colorlet{pink}{gruvboxlightpurple}
+\colorlet{purple}{gruvboxpurple}
+\colorlet{teal}{gruvboxaqua}
+\colorlet{violet}{gruvboxdarkpurple}
+\colorlet{white}{gruvboxfg1}
+\colorlet{yellow}{gruvboxyellow}
+\fi
+\endinput
+%%
+%% End of file `ozz-theme-gruvbox.sty'.

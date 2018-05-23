@@ -4,5 +4,12 @@
 # --shell-escape - allow latex to execute shell commands. this is used to makedir -p necessary directories
 openout_any=a latex --shell-escape ozzmodia.ins
 
+# update database
+texhash ../../..
+
 # build documentation
-latexmk ozzmodia.dtx
+latexmk
+latexmk -c
+
+# update database
+texhash ../../..

@@ -4,7 +4,7 @@ my $cwd = getcwd();
 my $basedir = $cwd . '/../../..';
 
 # add texmf dir to TEXINPUTS
-$ENV{'TEXMFHOME'} = $cwd . '/../texmf:' . `kpsewhich -var-value TEXMFHOME`;
+$ENV{'TEXMFHOME'} = $basedir . ':' . `kpsewhich -var-value TEXMFHOME`;
 
 # allow writing to directories that are not children of cwd
 $ENV{'openout_any'} = 'a';

@@ -5,6 +5,9 @@
 # allow .gitignore file
 !.gitignore
 
+# allow ls-R
+!ls-R
+
 # only allow pdf files in /doc
 !/doc/**/*.pdf
 
