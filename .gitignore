@@ -13,7 +13,15 @@
 !/tex/latex/**/*.cls
 
 # allow all files in /source
-!/source/**/*
+#!/source/**/*
+
+# allow relevant files in /source
+!/source/latex/**/.latexmkrc
+!/source/latex/**/docstrip.cfg  
+!/source/latex/**/*.dtx
+!/source/latex/**/*.ins
+!/source/latex/**/*.bat
+!/source/latex/**/*.sh
 
 # ignore log files
 *.log

@@ -1,0 +1,217 @@
+% \iffalse meta-comment
+%
+% Copyright (C) 2018 by oZzMoDiA <ozzmodia@outlook.com>
+% -----------------------------------------------------
+%
+% This file may be distributed and/or modified under the conditions of
+% the LaTeX Project Public License, either version 1.3c of this license
+% or (at your option) any later version. The latest version of this
+% license is in:
+%
+%    http://www.latex-project.org/lppl.txt
+%
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2006/05/20 or later.
+%
+% \fi
+%
+% \iffalse
+%<*driver>
+\ProvidesFile{ozz-theme-gruvbox.dtx}
+%</driver>
+%<*driver>
+\documentclass{ltxdoc}
+\usepackage{hyperref}
+\usepackage{todonotes}
+\usepackage[disable]{ozz-theme-gruvbox}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+\begin{document}
+  \DocInput{ozz-theme-gruvbox.dtx}
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+% \fi
+%
+% \iffalse
+%<ozz-theme-gruvbox>\NeedsTeXFormat{LaTeX2e}[2017/04/15]
+%<ozz-theme-gruvbox>\ProvidesPackage{ozz-theme-gruvbox}
+%<*ozz-theme-gruvbox>
+  [2018/05/20 v1.0 oZzMoDiA Theme Gruvbox]
+% \fi
+%
+% \changes{v1.0}{2018/05/20}{Initial version}
+%
+% \GetFileInfo{ozz-theme-gruvbox.dtx}
+%
+% \DoNotIndex{\newcommand,\newenvironment} 
+%
+% \title{The \textsf{ozz-theme-gruvbox} package\thanks{This document corresponds to \textsf{ozz-theme-gruvbox}~\fileversion, dated \filedate.}}
+% \author{oZzMoDiA}
+% \maketitle
+% \begin{abstract}
+% \textsf{ozz-theme-gruvbox} sets the used colortheme to Gruvbox\footnote{\url{https://github.com/morhetz/gruvbox}} colors for better screen readability.
+% \end{abstract}
+%
+% \tableofcontents
+%
+% \section{Package Options}
+% \begin{macro}{disable}
+% The |disable| option can be used to still define all the colors, but not actually apply the theme to the document.
+%    \begin{macrocode}
+\newif\ifdisabled
+\disabledfalse
+\DeclareOption{disable}{
+    \disabledtrue
+}
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+\ProcessOptions\relax
+%    \end{macrocode}
+%
+% \section{Defined Colors}
+% Table~\ref{tab:defined_colors} shows all the defined colors.
+%
+% \begin{table}[h!]
+% \centering
+% \begin{tabular}{ll}
+% \textbf{Name} &
+% \textbf{Color} \\
+% \hline
+% \texttt{gruvboxbg} & \textcolor{gruvboxbg}{\texttt{\#282828}} \\
+% \texttt{gruvboxbg0h} & \textcolor{gruvboxbg0h}{\texttt{\#1d2021}} \\
+% \texttt{gruvboxbg0} & \textcolor{gruvboxbg0}{\texttt{\#282828}} \\
+% \texttt{gruvboxbg1} & \textcolor{gruvboxbg1}{\texttt{\#3c3836}} \\
+% \texttt{gruvboxbg2} & \textcolor{gruvboxbg2}{\texttt{\#584945}} \\
+% \texttt{gruvboxbg3} & \textcolor{gruvboxbg3}{\texttt{\#665c54}} \\
+% \texttt{gruvboxbg4} & \textcolor{gruvboxbg4}{\texttt{\#7c6f64}} \\
+% \texttt{gruvboxgray} & \textcolor{gruvboxgray}{\texttt{\#928374}} \\
+% \texttt{gruvboxfg} & \textcolor{gruvboxfg}{\texttt{\#ebdbb2}} \\
+% \texttt{gruvboxfg0} & \textcolor{gruvboxfg0}{\texttt{\#fbf1c7}} \\
+% \texttt{gruvboxfg1} & \textcolor{gruvboxfg1}{\texttt{\#ebdbb2}} \\
+% \texttt{gruvboxfg2} & \textcolor{gruvboxfg2}{\texttt{\#d5c4a1}} \\
+% \texttt{gruvboxfg3} & \textcolor{gruvboxfg3}{\texttt{\#bdae93}} \\
+% \texttt{gruvboxfg4} & \textcolor{gruvboxfg4}{\texttt{\#a89984}} \\
+
+% \texttt{gruvboxlightred} & \textcolor{gruvboxlightred}{\texttt{\#fb4934}} \\
+% \texttt{gruvboxred} & \textcolor{gruvboxred}{\texttt{\#cc241d}} \\
+% \texttt{gruvboxdarkred} & \textcolor{gruvboxdarkred}{\texttt{\#9d0006}} \\
+
+% \texttt{gruvboxlightgreen} & \textcolor{gruvboxlightgreen}{\texttt{\#b8bb26}} \\
+% \texttt{gruvboxgreen} & \textcolor{gruvboxgreen}{\texttt{\#98971a}} \\
+% \texttt{gruvboxdarkgreen} & \textcolor{gruvboxdarkgreen}{\texttt{\#79740e}} \\
+
+% \texttt{gruvboxlightyellow} & \textcolor{gruvboxlightyellow}{\texttt{\#fabd2f}} \\
+% \texttt{gruvboxyellow} & \textcolor{gruvboxyellow}{\texttt{\#d79921}} \\
+% \texttt{gruvboxdarkyellow} & \textcolor{gruvboxdarkyellow}{\texttt{\#b57614}} \\
+
+% \texttt{gruvboxlightblue} & \textcolor{gruvboxlightblue}{\texttt{\#83a598}} \\
+% \texttt{gruvboxblue} & \textcolor{gruvboxblue}{\texttt{\#458588}} \\
+% \texttt{gruvboxdarkblue} & \textcolor{gruvboxdarkblue}{\texttt{\#076678}} \\
+
+% \texttt{gruvboxlightpurple} & \textcolor{gruvboxlightpurple}{\texttt{\#d3869b}} \\
+% \texttt{gruvboxpurple} & \textcolor{gruvboxpurple}{\texttt{\#b16286}} \\
+% \texttt{gruvboxdarkpurple} & \textcolor{gruvboxdarkpurple}{\texttt{\#8f3f71}} \\
+
+% \texttt{gruvboxlightaqua} & \textcolor{gruvboxlightaqua}{\texttt{\#8ec07c}} \\
+% \texttt{gruvboxaqua} & \textcolor{gruvboxaqua}{\texttt{\#689d6a}} \\
+% \texttt{gruvboxdarkaqua} & \textcolor{gruvboxdarkaqua}{\texttt{\#427b58}} \\
+
+% \texttt{gruvboxlightorange} & \textcolor{gruvboxlightorange}{\texttt{\#fe8019}} \\
+% \texttt{gruvboxorange} & \textcolor{gruvboxorange}{\texttt{\#d65d0e}} \\
+% \texttt{gruvboxdarkorange} & \textcolor{gruvboxdarkorange}{\texttt{\#af3a03}} \\
+% \end{tabular}
+% \caption{Defined Colors}
+% \label{tab:defined_colors}
+% \end{table}
+
+%    \begin{macrocode}
+\RequirePackage{xcolor}
+\definecolor{gruvboxbg}{HTML}{282828}
+\definecolor{gruvboxbg0h}{HTML}{1d2021}
+\definecolor{gruvboxbg0}{HTML}{282828}
+\definecolor{gruvboxbg1}{HTML}{3c3836}
+\definecolor{gruvboxbg2}{HTML}{584945}
+\definecolor{gruvboxbg3}{HTML}{665c54}
+\definecolor{gruvboxbg4}{HTML}{7c6f64}
+\definecolor{gruvboxgray}{HTML}{928374}
+\definecolor{gruvboxfg}{HTML}{ebdbb2}
+\definecolor{gruvboxfg0}{HTML}{fbf1c7}
+\definecolor{gruvboxfg1}{HTML}{ebdbb2}
+\definecolor{gruvboxfg2}{HTML}{d5c4a1}
+\definecolor{gruvboxfg3}{HTML}{bdae93}
+\definecolor{gruvboxfg4}{HTML}{a89984}
+%    \end{macrocode}
+%    \begin{macrocode}
+\definecolor{gruvboxlightred}{HTML}{fb4934}
+\definecolor{gruvboxred}{HTML}{cc241d}
+\definecolor{gruvboxdarkred}{HTML}{9d0006}
+%    \end{macrocode}
+%    \begin{macrocode}
+\definecolor{gruvboxlightgreen}{HTML}{b8bb26}
+\definecolor{gruvboxgreen}{HTML}{98971a}
+\definecolor{gruvboxdarkgreen}{HTML}{79740e}
+%    \end{macrocode}
+%    \begin{macrocode}
+\definecolor{gruvboxlightyellow}{HTML}{fabd2f}
+\definecolor{gruvboxyellow}{HTML}{d79921}
+\definecolor{gruvboxdarkyellow}{HTML}{b57614}
+%    \end{macrocode}
+%    \begin{macrocode}
+\definecolor{gruvboxlightblue}{HTML}{83a598}
+\definecolor{gruvboxblue}{HTML}{458588}
+\definecolor{gruvboxdarkblue}{HTML}{076678}
+%    \end{macrocode}
+%    \begin{macrocode}
+\definecolor{gruvboxlightpurple}{HTML}{d3869b}
+\definecolor{gruvboxpurple}{HTML}{b16286}
+\definecolor{gruvboxdarkpurple}{HTML}{8f3f71}
+%    \end{macrocode}
+%    \begin{macrocode}
+\definecolor{gruvboxlightaqua}{HTML}{8ec07c}
+\definecolor{gruvboxaqua}{HTML}{689d6a}
+\definecolor{gruvboxdarkaqua}{HTML}{427b58}
+%    \end{macrocode}
+%    \begin{macrocode}
+\definecolor{gruvboxlightorange}{HTML}{fe8019}
+\definecolor{gruvboxorange}{HTML}{d65d0e}
+\definecolor{gruvboxdarkorange}{HTML}{af3a03}
+%    \end{macrocode}
+%
+% \section{Color Bindings}
+% The default colors are redefined as follows:
+%    \begin{macrocode}
+\ifdisabled
+\else
+\RequirePackage[pagecolor={gruvboxbg},nopagecolor={none}]{pagecolor}
+\color{gruvboxfg}
+\colorlet{black}{gruvboxbg0h}
+\colorlet{blue}{gruvboxblue}
+\colorlet{brown}{gruvboxdarkorange}
+\colorlet{cyan}{gruvboxaqua}
+\colorlet{darkgray}{gruvboxbg1}
+\colorlet{gray}{gruvboxgray}
+\colorlet{lightgray}{gruvboxfg4}
+\colorlet{green}{gruvboxgreen}
+\colorlet{lime}{gruvboxlightgreen}
+\colorlet{magenta}{gruvboxlightpurple}
+\colorlet{olive}{gruvboxdarkgreen}
+\colorlet{orange}{gruvboxorange}
+\colorlet{pink}{gruvboxlightpurple}
+\colorlet{purple}{gruvboxpurple}
+\colorlet{teal}{gruvboxaqua}
+\colorlet{violet}{gruvboxdarkpurple}
+\colorlet{white}{gruvboxfg1}
+\colorlet{yellow}{gruvboxyellow}
+\fi
+%    \end{macrocode}
+%
+% \Finale
+% \iffalse
+%</ozz-theme-gruvbox>
+% \fi
+\endinput
