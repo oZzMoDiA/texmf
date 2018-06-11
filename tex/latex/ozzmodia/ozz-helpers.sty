@@ -23,11 +23,16 @@
 %% 
 \NeedsTeXFormat{LaTeX2e}[2017/04/15]
 \ProvidesPackage{ozz-helpers}
-  [2018/06/11 v1.1 oZzMoDiA Helpers]
+  [2018/06/11 v1.2 oZzMoDiA Helpers]
 \newif\iffinal
 \finalfalse
 \DeclareOption{final}{
   \finaltrue
+}
+\newif\ifscreenreadable
+\screenreadablefalse
+\DeclareOption{screenreadable}{
+  \screenreadabletrue
 }
 \ProcessOptions\relax
 \iffinal
@@ -38,6 +43,11 @@
     color=orange,
     textsize=tiny
   ]{todonotes}
+\fi
+\ifscreenreadable
+  \RequirePackage{cmbright}
+\else
+\fi
 \endinput
 %%
 %% End of file `ozz-helpers.sty'.

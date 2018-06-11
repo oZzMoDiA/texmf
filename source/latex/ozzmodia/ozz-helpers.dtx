@@ -39,11 +39,12 @@
 %<ozz-helpers>\NeedsTeXFormat{LaTeX2e}[2017/04/15]
 %<ozz-helpers>\ProvidesPackage{ozz-helpers}
 %<*ozz-helpers>
-  [2018/06/11 v1.1 oZzMoDiA Helpers]
+  [2018/06/11 v1.2 oZzMoDiA Helpers]
 % \fi
 %
 % \changes{v1.0}{2018/05/20}{Initial version}
 % \changes{v1.1}{2018/06/11}{Fixed error where a documentation line was printed in all documents where this package was used}
+% \changes{v1.2}{2018/06/11}{Added \textsf{screenreadable} option}
 %
 % \GetFileInfo{ozz-helpers.dtx}
 %
@@ -73,6 +74,17 @@
 %    \end{macrocode}
 % \end{macro}
 %
+% \begin{macro}{screenreadable}
+% The |screenreadable| option sets the font to one more suitable for reading on a screen.
+%    \begin{macrocode}
+\newif\ifscreenreadable
+\screenreadablefalse
+\DeclareOption{screenreadable}{
+  \screenreadabletrue
+}
+%    \end{macrocode}
+% \end{macro}
+%
 %    \begin{macrocode}
 \ProcessOptions\relax
 %    \end{macrocode}
@@ -87,6 +99,14 @@
     color=orange,
     textsize=tiny
   ]{todonotes}
+\fi
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+\ifscreenreadable
+  \RequirePackage{cmbright}
+\else
+\fi
 %    \end{macrocode}
 %</ozz-helpers>
 % \fi
