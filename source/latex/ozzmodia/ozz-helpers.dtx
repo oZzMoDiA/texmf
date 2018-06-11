@@ -39,10 +39,11 @@
 %<ozz-helpers>\NeedsTeXFormat{LaTeX2e}[2017/04/15]
 %<ozz-helpers>\ProvidesPackage{ozz-helpers}
 %<*ozz-helpers>
-  [2018/05/24 v1.0 oZzMoDiA Helpers]
+  [2018/06/11 v1.1 oZzMoDiA Helpers]
 % \fi
 %
 % \changes{v1.0}{2018/05/20}{Initial version}
+% \changes{v1.1}{2018/06/11}{Fixed error where a documentation line was printed in all documents where this package was used}
 %
 % \GetFileInfo{ozz-helpers.dtx}
 %
@@ -60,7 +61,7 @@
 % \section{Package Options}
 % \begin{macro}{final}
 % The |final| option can be used to tell the \textsf{ozz-helpers} package, that this is the final version of the document.
-  If this is option is not defined a \enquote{preliminary version} watermark is added to each page.
+% If this is option is not defined a \enquote{preliminary version} watermark is added to each page.
 % Additionally todonotes is enabled.
 % If this option is not enabled, todonotes will be disabled and the watermark will vanish.
 %    \begin{macrocode}
