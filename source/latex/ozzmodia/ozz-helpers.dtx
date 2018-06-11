@@ -1,0 +1,92 @@
+% \iffalse meta-comment
+%
+% Copyright (C) 2018 by oZzMoDiA <ozzmodia@outlook.com>
+% -----------------------------------------------------
+%
+% This file may be distributed and/or modified under the conditions of
+% the LaTeX Project Public License, either version 1.3c of this license
+% or (at your option) any later version. The latest version of this
+% license is in:
+%
+%    http://www.latex-project.org/lppl.txt
+%
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2006/05/20 or later.
+%
+% \fi
+%
+% \iffalse
+%<*driver>
+\ProvidesFile{ozz-helpers.dtx}
+%</driver>
+%<*driver>
+\documentclass{ltxdoc}
+\usepackage{hyperref}
+\usepackage{todonotes}
+\usepackage[final]{ozz-helpers}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+\begin{document}
+  \DocInput{ozz-helpers.dtx}
+  \PrintChanges
+  \PrintIndex
+\end{document}
+%</driver>
+% \fi
+%
+% \iffalse
+%<ozz-helpers>\NeedsTeXFormat{LaTeX2e}[2017/04/15]
+%<ozz-helpers>\ProvidesPackage{ozz-helpers}
+%<*ozz-helpers>
+  [2018/05/24 v1.0 oZzMoDiA Helpers]
+% \fi
+%
+% \changes{v1.0}{2018/05/20}{Initial version}
+%
+% \GetFileInfo{ozz-helpers.dtx}
+%
+% \DoNotIndex{\newcommand,\newenvironment} 
+%
+% \title{The \textsf{ozz-helpers} package\thanks{This document corresponds to \textsf{ozz-helpers}~\fileversion, dated \filedate.}}
+% \author{oZzMoDiA}
+% \maketitle
+% \begin{abstract}
+% \textsf{ozz-helpers} provides various functionality like setting one of the themes provided in this package as well as adding preliminary version annotations or changing the font of the document to a more screen readable one.
+% \end{abstract}
+%
+% \tableofcontents
+%
+% \section{Package Options}
+% \begin{macro}{final}
+% The |final| option can be used to tell the \textsf{ozz-helpers} package, that this is the final version of the document.
+  If this is option is not defined a \enquote{preliminary version} watermark is added to each page.
+% Additionally todonotes is enabled.
+% If this option is not enabled, todonotes will be disabled and the watermark will vanish.
+%    \begin{macrocode}
+\newif\iffinal
+\finalfalse
+\DeclareOption{final}{
+  \finaltrue
+}
+%    \end{macrocode}
+% \end{macro}
+%
+%    \begin{macrocode}
+\ProcessOptions\relax
+%    \end{macrocode}
+%
+% \section{Option Effects}
+%    \begin{macrocode}
+\iffinal
+  \RequirePackage[disable]{todonotes}
+\else
+  \RequirePackage{prelim2e}
+  \RequirePackage[
+    color=orange,
+    textsize=tiny
+  ]{todonotes}
+%    \end{macrocode}
+%</ozz-helpers>
+% \fi
+\endinput

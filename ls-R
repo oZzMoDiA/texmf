@@ -3,6 +3,7 @@
 .:
 doc
 ls-R
+ozzmodia.log
 source
 tex
 
@@ -10,7 +11,7 @@ tex
 ozzmodia
 
 ./doc/ozzmodia:
-ozz-theme-gruvbox.glo
+ozz-helpers.pdf
 ozz-theme-gruvbox.pdf
 
 
@@ -25,6 +26,7 @@ build.sh
 clean.sh
 docstrip.cfg
 .latexmkrc
+ozz-helpers.dtx
 ozzmodia.ins
 ozzmodia.log
 ozz-theme-gruvbox.dtx
@@ -36,4 +38,5 @@ latex
 ozzmodia
 
 ./tex/latex/ozzmodia:
+ozz-helpers.sty
 ozz-theme-gruvbox.sty
